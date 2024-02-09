@@ -7,7 +7,7 @@ import CircleButton from './components/CircleButton';
 import IconButton from './components/IconButton';
 
 const PlaceholderImage = require("./assets/icon.png");
-
+let data;
 export default function App() {
   const [showAppOptions, setShowAppOptions] = useState(false);
 
@@ -18,8 +18,9 @@ export default function App() {
       </View>
       <View style={styles.optionsContainer}>
    <Button label="Buscar dispositivos" theme="primary" onPress="findDevices" />
-<Button label="Desconectar" theme="primary" onPress="disconnect" />
-<Button label="Modos de uso" theme="primary" onPress="useModes" />
+   <Button label="Desconectar" theme="primary" onPress="disconnect" />
+   <Button label="Modos de uso" theme="primary" onPress="useModes" />
+   <Text> {data!=''?'Sin datos' : data} </Text>
       </View>
       <StatusBar style="auto" />
     </View>
